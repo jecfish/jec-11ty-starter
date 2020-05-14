@@ -1,6 +1,6 @@
 # Introduction
 
-I am writing a series on post on building site with 11ty, the static site generator.
+I am writing a series of posts on building site with 11ty, the static site generator. My personal website is built base on this starter.
 
 So far I've wrote the 1st one.
 
