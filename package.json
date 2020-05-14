@@ -1,0 +1,18 @@
+{
+  "name": "jec-11ty-starter",
+  "description": "11ty starter",
+  "scripts": {
+    "clean": "npx del dist",
+    "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
+    "start": "npm run serve",
+    "build": "ELEVENTY_ENV=dev npx eleventy",
+    "build:prod": "ELEVENTY_ENV=prod npx eleventy",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "author": "Jecelyn Yeen",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "del-cli": "^3.0.0"
+  }
+}
