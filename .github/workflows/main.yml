@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 13 * * *' # daily 9pm MYT, UTC based
+jobs:
+  build:
+    # Add [skip-ci] in commit / PR message
+    if: "!contains(github.event.head_commit.message, '[skip-ci]')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v1
+
+      # if you run build in multiple branches or OS,
+      # you might need more sophicated key and restore key
+      # check https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows#example-using-the-cache-action
+      - name: Retrieve npm cache (if any)
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: npm-packages
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build & deploy
+        run: npm run deploy
+        env:
+          CI: true
+          # remember to add YOUR_SECRET in settings > secrets
+          # generate the Firebase token from your machine
+          # using command: npx firebase login:ci
+          # refer to https://github.com/firebase/firebase-tools#using-with-ci-systems
+          FIREBASE_TOKEN: ${{ secrets.YOUR_SECRET }}
