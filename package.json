@@ -15,7 +15,7 @@
   "author": "Jecelyn Yeen",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.0",
     "del-cli": "^3.0.0",
     "firebase-tools": "^8.2.0"
   }
