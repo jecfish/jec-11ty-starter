@@ -1,0 +1,21 @@
+---
+title: Home page  
+---
+{# REMOVEABLE: feel free to remove / replace any content on this page #}
+
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% set greeting = 'hello' %}
+    
+    Yay, {{ greeting | upper }} world!
+
+    <ul>
+      <li><a href="/blog">blog listing</a></li>
+      <li><a href="/licenses">licenses</a></li>
+      <li><a href="/blog/post-one">blog post on</a></li>
+    </ul>
+  </body>
+</html>
