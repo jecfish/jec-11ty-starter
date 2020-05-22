@@ -7,7 +7,7 @@ So far I've wrote the two posts.
 
 1. Project configuration: [jec.fyi/blog/building-my-static-site-with-11ty](https://jec.fyi/blog/building-my-static-site-with-11ty) - release `0.1.1`
 2. Setting up GitHub Actions and Firebase Hosting: [jec.fyi/blog/setting-up-github-actions-and-firebase-hosting](https://jec.fyi/blog/setting-up-github-actions-and-firebase-hosting) - release `0.2.0`
-3. Customizing File Structure, URLs and Browsersync: [jec.fyi/blog/customizing-file-structure-and-urls](https://jec.fyi/blog/customizing-file-structure-urls-browsersync) - release `0.3.0`
+3. Customizing File Structure, URLs and Browsersync: [jec.fyi/blog/customizing-file-structure-urls-browsersync](https://jec.fyi/blog/customizing-file-structure-urls-browsersync) - release `0.3.0`
 
 Each blog post come with a new release. You may run `git checkout [release number]` to see how's the code like and follow through my blog post to build your site.  
 
