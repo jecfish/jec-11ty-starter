@@ -4,19 +4,35 @@
   "scripts": {
     "clean": "npx del dist",
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
+    "prestart": "npm run transform-image",
     "start": "npm run serve",
     "prebuild": "npm run clean",
     "build": "ELEVENTY_ENV=dev npx eleventy",
     "build:prod": "ELEVENTY_ENV=prod npx eleventy",
     "predeploy": "npm run build:prod",
     "deploy": "npx firebase deploy",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "transform-image": "npx gulp -f tasks/transform-image.gulp.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run transform-image"
+    }
   },
   "author": "Jecelyn Yeen",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "del-cli": "^3.0.0",
-    "firebase-tools": "^8.2.0"
+    "firebase-tools": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-cli": "^2.2.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "husky": "^4.2.5",
+    "imagemin-webp": "^5.1.0",
+    "jimp": "^0.12.1",
+    "through2": "^3.0.1"
   }
 }
