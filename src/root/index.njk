@@ -1,57 +1,53 @@
 ---
-title: Home page  
+title: Home page 
+desc: This is home page 
 ---
 {# REMOVEABLE: feel free to remove / replace any content on this page #}
 
-<html lang="en">
-  <head>
-    <title>{{ title }}</title>
-  </head>
-  <body>
-    {% set greeting = 'hello' %}
+{% set greeting = 'hello' %}
+
+Yay, {{ greeting | upper }} world!
+
+<ul>
+  <li><a href="/blog">blog listing</a></li>
+  <li><a href="/licenses">licenses</a></li>
+  <li><a href="/blog/post-one">blog post one</a></li>
+  <li><a href="/sitemap.txt">sitemap</a></li>
+</ul>
+
+<h2>testing images<h2>
+
+{% set images = [
+  ['aaa','jpg', true],
+  ['bbb', 'png', true],
+  ['ccc-256', 'jpg', false],
+  ['ddd', 'gif', false],
+  ['eee','svg', false],
+  ['favicon-fake', 'jpg', false]
+] %}
+
+{% for name, extension, isResponsive in images %}
+  <picture>
+    {%if isResponsive %}
+    <source media="(max-width: 500px)"
+      srcset="/assets/webp-500/{{name}}.webp">
+    <source media="(min-width: 501px)"
+      srcset="/assets/webp/{{name}}.webp">
+    <source media="(max-width: 500px)"
+      srcset="/assets/img-500/{{name}}.{{extension}}">
+    {% endif %}
     
-    Yay, {{ greeting | upper }} world!
+    <img src="assets/img/{{name}}.{{extension}}" />
+  </picture>
+{% endfor %}
 
-    <ul>
-      <li><a href="/blog">blog listing</a></li>
-      <li><a href="/licenses">licenses</a></li>
-      <li><a href="/blog/post-one">blog post on</a></li>
-    </ul>
+<style>
+  picture {
+    display: block;
+    padding: 10px;
+  }
 
-    <h2>testing images<h2>
-    {% set images = [
-      ['aaa','jpg', true],
-      ['bbb', 'png', true],
-      ['ccc-256', 'jpg', false],
-      ['ddd', 'gif', false],
-      ['eee','svg', false],
-      ['favicon-fake', 'png', false]
-    ] %}
-    {% for name, extension, isResponsive in images %}
-      <picture>
-       {%if isResponsive %}
-        <source media="(max-width: 500px)"
-          srcset="/assets/webp-500/{{name}}.webp">
-        <source media="(min-width: 501px)"
-          srcset="/assets/webp/{{name}}.webp">
-        <source media="(max-width: 500px)"
-          srcset="/assets/img-500/{{name}}.{{extension}}">
-       {% endif %}
-        
-       <img src="assets/img/{{name}}.{{extension}}" />
-      </picture>
-    {% endfor %}
-
-    <style>
-      picture {
-        display: block;
-        padding: 10px;
-      }
-
-      img {
-        max-width: 200px;
-      }
-    </style>
-    
-  </body>
-</html>
+  img {
+    max-width: 200px;
+  }
+</style>

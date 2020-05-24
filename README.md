@@ -8,6 +8,7 @@ Here are the post I wrote so far:
 2. Setting up GitHub Actions and Firebase Hosting: [jec.fyi/blog/setting-up-github-actions-and-firebase-hosting](https://jec.fyi/blog/setting-up-github-actions-and-firebase-hosting) - release `0.2.0`
 3. Customizing File Structure, URLs and Browsersync: [jec.fyi/blog/customizing-file-structure-urls-browsersync](https://jec.fyi/blog/customizing-file-structure-urls-browsersync) - release `0.3.0`
 4. Automating Image Optimization Workflow: [jec.fyi/blog/automating-image-optimization-workflow](https://jec.fyi/blog/automating-image-optimization-workflow) - release `0.4.0`
+5. Setting up SEO and Google Analytics: [jec.fyi/blog/setting-up-seo-and-google-analytics](https://jec.fyi/blog/setting-up-seo-and-google-analytics) - release `0.5.0`
 
 Each blog post come with a new release. You may run `git checkout [release number]` to see how's the code like and follow through my blog post to build your site.  
 

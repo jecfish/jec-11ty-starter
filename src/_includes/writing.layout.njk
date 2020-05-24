@@ -1,0 +1,57 @@
+---
+layout: base.layout.njk
+---
+<!-- the content -->
+<main>
+  <article>{{ content | safe }}</article>
+</main>
+<!-- the structured data -->
+{% set absoluteUrl = env.base.site + (page.url | replace('.html', '')) %}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "@id": "{{ absoluteUrl }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ absoluteUrl }}"
+    },
+    "url": "{{ absoluteUrl }}",
+    "headline": "{{ desc }}",
+    "description": "{{ title }}",
+    "audience": "web developers and designers",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ cover }}",
+      "height": 675,
+      "width": 1200
+    },
+    "dateCreated": "{{ date }}",
+    "datePublished": "{{ date }}",
+    "dateModified": "{{ date }}",
+    "articleSection": "Blog",
+    "author": {
+      "@type": "Person",
+      "name": "{{ env.author }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ env.base.img }}your_photo.jpg",
+        "height": 1024,
+        "width": 1024
+      },
+      "url": "{{ env.base.site }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "@id": "{{ env.base.site }}",
+        "name": "{{ env.siteName }}",
+        "url": "{{ env.base.site }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ env.base.img }}your_photo.jpg",
+          "height": 1024,
+          "width": 1024
+        }
+    }
+  }
+</script>
