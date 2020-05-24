@@ -16,7 +16,7 @@ Stay tune for updates!
 
 
 # Using this template
-You may use this template as your project stater.
+You may use this template as your project starter.
 
 1. Clone / Download it
 2. Run `npm install`
