@@ -7,6 +7,8 @@ const isProd = environment === PROD_ENV;
 
 const folder = {
   assets: 'assets',
+  input: 'src',
+  output: 'dist'
 };
 
 const dir = {

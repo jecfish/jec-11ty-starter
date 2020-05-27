@@ -1,3 +1,4 @@
+{% import "src.macro.njk" as src with context %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,8 +42,14 @@
       <meta name="robots" content="noindex"/>
     {% endif %}
 
+    {{ src.css('base.layout.css') }}
+    {{ src.css(page.inputPath) }}
+
   </head>
   <body>
+    <h1>{{ title }}</h1>
     {{ content | safe }}
+    {{ src.js('base.layout.js') }}
+    {{ src.js(page.inputPath) }}
   </body>
 </html>

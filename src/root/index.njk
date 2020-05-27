@@ -15,7 +15,9 @@ Yay, {{ greeting | upper }} world!
   <li><a href="/sitemap.txt">sitemap</a></li>
 </ul>
 
-<h2>testing images<h2>
+<h2>testing images</h2>
+
+<p>Lorem Ipsum blah blah</p>
 
 {% set images = [
   ['aaa','jpg', true],
@@ -40,14 +42,3 @@ Yay, {{ greeting | upper }} world!
     <img src="assets/img/{{name}}.{{extension}}" />
   </picture>
 {% endfor %}
-
-<style>
-  picture {
-    display: block;
-    padding: 10px;
-  }
-
-  img {
-    max-width: 200px;
-  }
-</style>

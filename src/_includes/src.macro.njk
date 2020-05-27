@@ -1,0 +1,26 @@
+{% macro css(filename) %}
+  {% set path = filename | replace('./src/', '../') %}
+  {% set path = utils.replaceExtension(path, 'css') %}
+  
+  {% set cssStr %}
+    {% include path ignore missing %}
+  {% endset %}
+
+  <style>
+    {{ cssStr | safe }}
+  </style>
+{% endmacro %}
+
+
+{% macro js(filename) %}
+  {% set path = filename | replace('./src/', '../') %}
+  {% set path = utils.replaceExtension(path, 'js') %}
+
+  {% set jsStr %}
+    {% include path ignore missing %}
+  {% endset %}
+
+  <script>
+    {{ jsStr | safe }}
+  </script>
+{% endmacro %}

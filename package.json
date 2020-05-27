@@ -9,10 +9,12 @@
     "prebuild": "npm run clean",
     "build": "ELEVENTY_ENV=dev npx eleventy",
     "build:prod": "ELEVENTY_ENV=prod npx eleventy",
+    "postbuild:prod": "npm run minify-output",
     "predeploy": "npm run build:prod",
     "deploy": "npx firebase deploy",
     "debug": "DEBUG=* npx eleventy",
-    "transform-image": "npx gulp -f tasks/transform-image.gulp.js"
+    "transform-image": "npx gulp -f tasks/transform-image.gulp.js",
+    "minify-output": "npx gulp -f tasks/minify-output.gulp.js"
   },
   "husky": {
     "hooks": {
@@ -27,12 +29,16 @@
     "firebase-tools": "^8.2.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.2.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
+    "gulp-terser": "^1.2.0",
     "husky": "^4.2.5",
     "imagemin-webp": "^5.1.0",
     "jimp": "^0.12.1",
+    "terser": "^4.7.0",
     "through2": "^3.0.1"
   }
 }

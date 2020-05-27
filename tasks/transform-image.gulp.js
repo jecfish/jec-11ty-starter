@@ -6,8 +6,9 @@ const through2 = require('through2');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
 const changed = require('gulp-changed');
+const env = require('../src/_data/env');
 
-const ASSETS_DIR = '../assets';
+const ASSETS_DIR = `../${env.folder.assets}`;
 const EXCLUDE_SRC_GLOB = `!(favicon*|*-256)`;
 
 /** resize images to input width
