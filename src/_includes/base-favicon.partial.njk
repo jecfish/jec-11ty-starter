@@ -1,0 +1,27 @@
+<!-- generics: classic -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.ico"
+  sizes="16x16 32x32 48x48 64x64">
+
+<!-- iOS -->
+<link rel="mask-icon" color="{{ env.themeColor }}"
+  href="{{ env.base.favicons }}favicon.svg">
+
+{% set icons = [120, 152, 180] %}
+{% for icon in icons %}
+  <link rel="apple-touch-icon" sizes="{{icon}}x{{icon}}"
+    href="{{ env.base.favicons }}favicon-{{icon}}.png">
+{% endfor %}
+
+<!-- Windows 8 IE 10 -->
+<meta name="msapplication-TileColor"
+  content="{{ env.themeColor }}" />
+<meta name="msapplication-TileImage"
+  content="{{ env.base.favicons }}favicon-144.png" />
+
+<!-- Windows 8.1 + IE11 and above -->
+<meta name="msapplication-config" content="browserconfig.xml" />
+
+<!-- Web App manifest -->
+<link rel="manifest" href="/web.manifest">
+<meta name="theme-color" content="{{ env.themeColor }}"

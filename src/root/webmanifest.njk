@@ -1,0 +1,25 @@
+---
+layout: false
+permalink: web.manifest
+ignore: true
+---
+{
+    "name": "{{ env.siteName }}",
+    "short_name": "{{ env.siteName }}",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "{{ env.base.favicons }}favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "{{ env.base.favicons }}favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "{{ env.themeColor }}",
+    "background_color": "{{ env.themeColor }}",
+    "display": "standalone"
+}
