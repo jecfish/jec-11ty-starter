@@ -13,10 +13,12 @@ const folder = {
 
 const dir = {
   img: `/${folder.assets}/img/`,
+  favicons: `/${folder.assets}/img/favicons/`
 }
 
 module.exports = {
   siteName: 'your site name',
+  themeColor: '#000000',
   author: 'your name',
   environment,
   isProd,
@@ -24,6 +26,7 @@ module.exports = {
   base: {
     site: baseUrl,
     img: `${baseUrl}${dir.img}`,
+    favicons: `${baseUrl}${dir.favicons}`,
   },
   tracking: {
     gtag: 'your_tracking_id'

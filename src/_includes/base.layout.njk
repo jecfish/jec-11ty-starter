@@ -9,6 +9,8 @@
     <title>{{ title }}</title>
     <meta name="description" content="{{ desc or title }}">
 
+    {% include 'base-favicon.partial.njk' %}
+
     <!-- Open graph -->
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ desc or title }}">
