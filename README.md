@@ -11,6 +11,7 @@ Here are the post I wrote so far:
 5. Setting up SEO and Google Analytics: [jec.fyi/blog/setting-up-seo-and-google-analytics](https://jec.fyi/blog/setting-up-seo-and-google-analytics) - release `0.5.0`
 6. Minifying HTML, JavaScript, CSS - Automate Inline with Naming Conventions: [jec.fyi/blog/minifying-html-js-css](https://jec.fyi/blog/minifying-html-js-css) - release `0.6.0`
 7. How many favicons should you have in your site: [jec.fyi/blog/favicons-manifest](https://jec.fyi/blog/favicons-manifest) - release `0.7.0`
+8. Creating Filters, Shortcodes and Plugins: [jec.fyi/blog/creating-filters-shortcodes-plugins](https://jec.fyi/blog/creating-filters-shortcodes-plugins) - release `0.8.0`
 
 Each blog post come with a new release. You may run `git checkout [release number]` to see how's the code like and follow through my blog post to build your site.  
 
