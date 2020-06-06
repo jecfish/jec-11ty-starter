@@ -25,6 +25,9 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "date-fns": "^2.14.0",
     "del-cli": "^3.0.0",
     "firebase-tools": "^8.2.0",
     "gulp": "^4.0.2",
@@ -38,6 +41,7 @@
     "husky": "^4.2.5",
     "imagemin-webp": "^5.1.0",
     "jimp": "^0.12.1",
+    "outdent": "^0.7.1",
     "terser": "^4.7.0",
     "through2": "^3.0.1"
   }

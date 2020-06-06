@@ -11,6 +11,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(env.folder.assets);
   eleventyConfig.addPassthroughCopy(`${env.folder.input}/favicon.ico`);
 
+  // add plugins
+  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'));
+  eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
+  eleventyConfig.addPlugin(require('./plugins'));
+
   // set input and output folder
   return {
     dir: { input: env.folder.input, output: env.folder.output },

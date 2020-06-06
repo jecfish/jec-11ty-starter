@@ -1,9 +1,11 @@
 ---
 layout: base.layout.njk
 ---
+{% import "src.macro.njk" as src with context %}
 <!-- the content -->
 <main>
   <article>{{ content | safe }}</article>
+  {{ src.css("writing.layout.css") }}
 </main>
 <!-- the structured data -->
 {% set absoluteUrl = env.base.site + (page.url | replace('.html', '')) %}
