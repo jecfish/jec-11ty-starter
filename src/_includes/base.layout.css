@@ -1,3 +1,22 @@
 h1 {
   background: red;
 }
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 300ms ease-in-out 0s;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode a {
+  color: lightblue;
+}
+
+.dark-mode img {
+  filter: grayscale(30%);
+}

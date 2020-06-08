@@ -26,6 +26,10 @@
     <meta name="twitter:image" content="{{ cover }}">
     <meta name="twitter:creator" content="@yourUsername">
 
+    {% if prism %}
+      <link id="prism-css" rel="stylesheet" href="{{ env.base.css }}prism-light.css">
+    {% endif %}
+
     {# Google Analytics #}
     <script async 
       src="https://www.googletagmanager.com/gtag/js?id={{ env.tracking.gtag }}">
@@ -49,6 +53,8 @@
 
   </head>
   <body>
+    <img id="color-scheme-toggle" width="36px"
+      src="{{ env.base.icons }}dark.svg" alt="toggle dark mode" />
     <h1>{{ title }}</h1>
     {{ content | safe }}
     {{ src.js('base.layout.js') }}

@@ -12,6 +12,7 @@ Here are the post I wrote so far:
 6. Minifying HTML, JavaScript, CSS - Automate Inline with Naming Conventions: [jec.fyi/blog/minifying-html-js-css](https://jec.fyi/blog/minifying-html-js-css) - release `0.6.0`
 7. How many favicons should you have in your site: [jec.fyi/blog/favicons-manifest](https://jec.fyi/blog/favicons-manifest) - release `0.7.0`
 8. Creating Filters, Shortcodes and Plugins: [jec.fyi/blog/creating-filters-shortcodes-plugins](https://jec.fyi/blog/creating-filters-shortcodes-plugins) - release `0.8.0`
+9. Supporting Dark Mode in Your Website: [jec.fyi/blog/supporting-dark-mode](https://jec.fyi/blog/supporting-dark-mode) - release `0.9.0`
 
 Each blog post come with a new release. You may run `git checkout [release number]` to see how's the code like and follow through my blog post to build your site.  
 

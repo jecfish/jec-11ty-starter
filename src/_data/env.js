@@ -13,7 +13,9 @@ const folder = {
 
 const dir = {
   img: `/${folder.assets}/img/`,
-  favicons: `/${folder.assets}/img/favicons/`
+  favicons: `/${folder.assets}/img/favicons/`,
+  css: `/${folder.assets}/css/`,
+  icons: `/${folder.assets}/img/icons/`,
 }
 
 module.exports = {
@@ -27,6 +29,8 @@ module.exports = {
     site: baseUrl,
     img: `${baseUrl}${dir.img}`,
     favicons: `${baseUrl}${dir.favicons}`,
+    css: `${baseUrl}${dir.css}`,
+    icons: `${baseUrl}${dir.icons}`,
   },
   tracking: {
     gtag: 'your_tracking_id'
