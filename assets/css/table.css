@@ -9,8 +9,16 @@ table tr {
   padding: 0;
 }
 
+.dark-mode table tr {
+  background-color: grey;
+}
+
 table tr:nth-child(2n) {
   background-color: #f8f8f8;
+}
+
+.dark-mode table tr:nth-child(2n) {
+  background-color: slategray;
 }
 
 table tr th {

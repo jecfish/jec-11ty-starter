@@ -4,6 +4,9 @@ desc: This is home page
 ---
 {# REMOVEABLE: feel free to remove / replace any content on this page #}
 
+<div>
+  <img id="profilePhoto" src="{{ env.base.img }}me-light.jpg">
+</div>
 {% set greeting = 'hello' %}
 
 Yay, {{ greeting | upper }} world!
@@ -11,7 +14,7 @@ Yay, {{ greeting | upper }} world!
 <ul>
   <li><a href="/blog">blog listing</a></li>
   <li><a href="/licenses">licenses</a></li>
-  <li><a href="/blog/post-one">blog post one (demo table, date filter, youtube shortcode)</a></li>
+  <li><a href="/blog/post-one">blog post one (demo table, date filter, youtube shortcode, prism code highlight)</a></li>
   <li><a href="/sitemap.txt">sitemap</a></li>
 </ul>
 
