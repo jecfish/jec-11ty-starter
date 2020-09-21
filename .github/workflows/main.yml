@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-  schedule:
-#     enable the next line if you want to run on schedule
+#   enable the next 2 lines if you want to run on schedule
+#   schedule:
 #     - cron: '0 13 * * *' # daily 9pm MYT, UTC based
 jobs:
   build:
