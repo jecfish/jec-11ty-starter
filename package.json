@@ -42,7 +42,7 @@
     "imagemin-webp": "^5.1.0",
     "jimp": "^0.12.1",
     "outdent": "^0.7.1",
-    "terser": "^4.7.0",
+    "terser": "^4.8.1",
     "through2": "^3.0.1"
   }
 }
