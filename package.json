@@ -24,8 +24,8 @@
   "author": "Jecelyn Yeen",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "date-fns": "^2.14.0",
     "del-cli": "^3.0.0",
